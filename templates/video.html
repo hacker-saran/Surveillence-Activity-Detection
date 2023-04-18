@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <head>
+        <title> Video Form</title>
+        <link rel="stylesheet" href="{% static 'styles\login_css.css'%}">
+    </head>
+    <body>
+        
+        <form method="post" action=" " enctype="multipart/form-data" > 
+            {% csrf_token %}
+                    <div style="display: flex;justify-content: center;" >
+                        <video style="max-height: 20rem;visibility: hidden;" autoplay controls id="video-preview">
+                    </div>
+                    <div style="display: flex;justify-content: center;">
+                 
+                    <input  type="file" id="file-button" name="upload" hidden="true" multiple="false" accept="video/*" onchange="loadFile(event)"/>
+                    <div >
+                    <div class="button-box2">
+                        <div id="btn2"></div>
+                        <button type="button" id="upload-button" class="btn btn-success submit-btn">Upload</button>
+                     
+                    </div>
+                    <div class="button-box2">
+                        <div id="btn2"></div>
+                       
+                    <button type="submit" class="btn btn-success submit-btn">Submit</button>   
+                    </div>
+                </div>
+                </div>
+
+                </form>
+             
+    </body>
+    <script>
+        const hiddenFile = document.getElementById("file-button");
+const uploadButton = document.getElementById("upload-button");
+
+uploadButton.addEventListener("click", function(){
+    hiddenFile.click();
+   
+})
+        var loadFile = function(event) {
+    var imgpreview = document.getElementById('video-preview');
+    var tmppath = URL.createObjectURL(event.target.files[0]);
+    console.log(tmppath)
+    imgpreview.src = URL.createObjectURL(event.target.files[0]);
+    // imgpreview.onload = function() {
+    //   URL.revokeObjectURL(imgpreview.src) // free memory
+    // }
+    document.getElementById('video-preview').style.visibility='visible'
+  };
+  
+    </script>
+</html>

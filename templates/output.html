@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+        <title> Video Form</title>
+        <link rel="stylesheet" href="{% static 'styles\login_css.css'%}">
+    </head>
+    <body>
+        <div style="display: flex;justify-content: center;" >
+            <video src="{% static  file1 %}" style="max-height: 20rem;" autoplay controls id="video-preview">
+        </div>
+        <div class="button-box2">
+            <div id="btn2"></div>
+            <a href="{% static  file1 %}" download >
+        <button type="down" class="btn btn-success submit-btn">Download</button>   
+        </a>
+        </div>
+        <div style="display: flex;justify-content: center;" >
+            <video src="{% static  file2 %}" style="max-height: 20rem;" autoplay controls id="video-preview">
+        </div>
+        <div class="button-box2">
+            <div id="btn2"></div>
+          <a href="{% static  file2 %}" download >
+        <button type="submit" class="btn btn-success submit-btn">Download</button>   
+    </a>
+        </div>
+       
+    </body>
+    </html>

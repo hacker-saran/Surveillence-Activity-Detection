@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <title> Registration Form</title>
+        <link rel="stylesheet" href="{% static 'styles\joinus_css.css'%}">
+    </head>
+    <body>
+        <div class="hero">
+            <a href="\" class="btn">Home</a>      
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn">Register</button>
+                </div>
+                <div class="social-icons">
+                    <img src="{% static 'images\fb.png'%}">
+                    <img src="{% static 'images\tw.png'%}">
+                    <img src="{% static 'images\gp.png'%}">
+                </div>
+                <form id="joinus" class="input-group" action="joinus" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="username" class="input-field" placeholder="User Name" required>
+                    <input type="email" name="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" name="password1" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" name="password2" class="input-field" placeholder="Re-Enter password" required>
+                 <div class="button-box2">
+                    <div id="btn2"></div>    
+                    <button type="submit" class="submit-btn">Register</button>
+                </div>
+
+                </form>
+             </div>      
+        </div>
+    </body>
+
+</html>

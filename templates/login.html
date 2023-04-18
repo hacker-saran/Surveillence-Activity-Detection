@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+    <head>
+        <title> Login Form</title>
+        <link rel="stylesheet" href="{% static 'styles\login_css.css'%}">
+    </head>
+    <body>
+        <div class="hero">     
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn">Login</button>
+                </div> 
+                <div class="social-icons">
+                    <img src="{% static 'images\fb.png'%}">
+                    <img src="{% static 'images\tw.png'%}">
+                    <img src="{% static 'images\gp.png'%}">
+                </div>
+                <form id="login" class="input-group" method="post" action="login" >
+                    {% csrf_token %}
+                    <input type="username" name="username" class="input-field" placeholder="username" required>
+                    <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                 <div class="button-box2">
+                    <div id="btn2"></div>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </div>
+
+                </form>
+             </div>      
+        </div>
+    </body>
+</html>

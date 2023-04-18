@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta name="viodetection" content=width=device-width,initial-scale=1.0">
+    <title>Violence Detection</title>
+    <link rel="stylesheet" href="{% static 'styles/home_css.css' %}"> 
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header class="header"> 
+
+        <a href="#" class="logo">
+            <img src="{% static 'images/logo.png'%}" alt="">
+        </a>
+    
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#login">login</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+           
+        </div>
+    
+        <div class="headimg">
+            <a href="#"><img src="{% static 'images/search.jpg'%}"></a>
+        </div>
+    </header>
+
+    <!--Header -->
+
+    <!--Home-->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Survillence Activity Detection</h3>
+            <p>Implementing Deep Learning methodologies in CCTV Camera to detect Violence and Accident</p>
+            <a href="#" class="btn">Lets Explore More</a>
+        </div>
+    </section>
+
+    <!--Home-->
+
+    <!--About-->
+
+        <section class="about" id="about">
+            <h1 class="abtheader"><span>ABOUT</span>US</h1>
+            <div class="row">
+                <div class="aboutimg">
+                    <img src="{% static 'images/aboutimg.jpg'%}" alt="oops!....">
+                </div>
+                <div class="aboutcontent">
+                    <h3>What Makes Our Application More Effective..?</h3> 
+                    <p>An easy adoptable CCTV Application which detects and records the 
+                        Violence activity and the Accidents.</p>
+                    <p>This Application reduces time by storing the specific activity as recorded files.</p>   
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+    <!--About-->
+
+    <!--Login-->
+
+    <section class="login" id="login">
+        <div class="logincontent">
+                <h1 class="loginhead"><span >LOGIN </span>NOW</h1>
+                <p>An easy adoptable CCTV Application which detects and records the 
+                    Violence activity and the Accidents.</p>
+                <p>This Application reduces time by storing the specific activity as recorded files.</p>    
+                <a href="joinapp/joinus" class="loginbtn">JOIN US</a>"     "
+                "    "<a href="joinapp/login" class="loginbtn">LOGIN</a>
+                "    "<a href="final/video" class="loginbtn">VIDEO</a>
+        </div>
+    </section>
+
+    <!--Login-->
+
+    <!--Blogs-->
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> our <span>blogs</span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/Crime.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">crime deterrent</a>
+                    <span>by admin / 14th july, 2022</span>
+                    <p>The sight of a CCTV camera infers an air of danger and the presence of the law, deterring anyone planning to carry out a crime from doing so.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/monitor.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Moniters Activities</a>
+                    <span>by admin / 14th july, 2022</span>
+                    <p>CCTV systems are able keep track of whats happening and collects evidence of specific activities like violence and accidents.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/storage.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Keep Records</a>
+                    <span>by admin / 14th july, 2022</span>
+                    <p>it keeps good record of CCTV footage and helps to make decisions easily. Since it keeps records for specific activities, it makes the work faster.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <!--Blogs-->
+</body>
+</html>
